@@ -24,7 +24,7 @@ body{
     background-color: var(--primary-white-color);
     color: var(--primary-text-color);
 
-    font-family: Roboto; sans-serif;
+    font-family: Roboto, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -37,8 +37,6 @@ body{
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 94px;
-
-    outline: 2px solid tomato;
     }
 
 .center{
@@ -123,7 +121,7 @@ body{
         color: var(--title-color);
         text-decoration: none;
     
-        font-family: Raleway; sans-serif;
+        font-family: Raleway, sans-serif;
         font-style: normal;
         font-weight: bold;
         font-size: 26px;
@@ -230,7 +228,7 @@ display: flex;
     color: var(--primary-white-color);
     background-color: var(--footer-black-color);
 
-    font-family: Roboto; sans-serif;
+    font-family: Roboto, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -239,12 +237,11 @@ display: flex;
 
 .footer-box{
     display: flex;
-    justify-content: space-between;
     padding-top: 45px;
 }
 .logo-footer{
     color: var(--primary-white-color);
-    font-family: Raleway; sans-serif;
+    font-family: Raleway, sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 22px;
@@ -264,27 +261,43 @@ display: flex;
 .contact-footer:focus{
         color: var(--accent-color);
     }
+.footer-box  .item:nth-child(1){
+    margin-right: 69px;
+}
+.footer-box  .item:nth-child(2){
+    margin-right: 94px;
+    margin-left: 0;
+}
 .footer-social.link{
     display: flex;  
     list-style: none;
-    padding-top: 20px;
-    padding-bottom: 74px;
+    margin-top: 20px;
+    margin-bottom: 74px;
+    padding: 0;
 }
-.footer-social.link:not(:last-child){
+.footer-social.link .item:not(:last-child){
     margin-right: 10px;
 }
-.footer-social .item{
-    background-color: burlywood;
-}
+
 .footer-social.link a{
+    display: block;
     color: var(--primary-white-color);
     text-decoration: none;
     padding: 0px;
-    display: block;
+    
 }
+
 .footer-social.link a:hover, .footer-social.link a:hover{
     color: var(--accent-color);
 }
+
+.button.secondary{
+    text-align: center;
+    margin-top: 20px;
+    margin-right: 216px;
+    margin-bottom: 110px;
+}
+
 .footer-copyright{
     align-self: flex-end;
 }
@@ -339,14 +352,12 @@ margin-right: 8px;
     font-weight: bold;
     font-size: 18px;
     line-height: 2;
-    background-color: crimson;
 }
 .text-menu{
     color: var(--primary-text-color);
     font-weight: normal;
     font-size: 16px;
     line-height: 1.88;  
-    background-color: blue; 
 }
 .project-text{ 
     color: var(--primary-text-color);  
