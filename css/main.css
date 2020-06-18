@@ -35,20 +35,30 @@ body {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  padding-bottom: 94px;
-  padding-top: 94px;
 }
 
 img {
   display: block;
   max-width: 100%;
   height: auto;
-  margin-left: auto;
-  margin-right: auto;
+}
+
+p {
+  margin: 0;
 }
 
 .center {
   text-align: center;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap; /* added line */
 }
 
 /* button */
@@ -89,14 +99,16 @@ img {
 }
 
 /* site-nav */
-header {
+.header-profile {
   border-bottom: 1px solid #ececec;
 }
+
 .container.main-nav {
   display: flex;
   align-items: center;
-  padding-bottom: 0px;
+  margin-bottom: 0px;
 }
+
 .site-nav {
   font-weight: 500;
   font-size: 14px;
@@ -104,9 +116,11 @@ header {
   display: flex;
   margin-left: 85px;
 }
+
 .site-nav .item:not(:last-child) {
   margin-right: 50px;
 }
+
 .site-nav .link {
   display: block;
   padding-top: 32px;
@@ -124,10 +138,13 @@ header {
 .site-nav .link:focus {
   color: var(--accent-color);
 }
+
 .site-nav .link.current {
   color: var(--accent-color);
 }
+
 /* Logo */
+
 .logo {
   display: flex;
 
@@ -140,28 +157,35 @@ header {
   font-size: 26px;
   line-height: 1.19;
 }
+
 .first {
   color: var(--accent-color);
 }
 
 /* Контакты */
+
 .list.nav-contact {
   display: flex;
   margin-left: auto;
 }
+
 .nav-contact .item:not(:last-child) {
   margin-right: 30px;
 }
+
 .mail {
   color: var(--primary-text-color);
 }
+
 .tel {
   color: var(--primary-text-color);
 }
+
 .mail:hover,
 .mail:focus {
   color: var(--accent-color);
 }
+
 .tel:hover,
 .tel:focus {
   color: var(--accent-color);
@@ -193,36 +217,51 @@ header {
   border-radius: 4px;
   margin-top: 30px;
 }
+
 /* Преимущества */
 .feature-list.list {
   display: flex;
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
+
 .feature-list .item:not(:last-child) {
   margin-right: 30px;
 }
-.feature-title {
-  display: none;
-}
+
 .feature-subtitle {
   padding-top: 30px;
+  padding-bottom: 10px;
   margin: 0;
 }
+
 /* Чем мы занимаемся */
+
 .work-section {
   padding-top: 0;
 }
+
 .title.second {
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
   padding-bottom: 50px;
 }
+
 .work-list.list {
   display: flex;
-  justify-content: space-between;
+  padding-bottom: 94px;
+}
+
+.cart-work:not(:last-child) {
+  margin-right: 30px;
 }
 
 /* Наша команда */
+.team.container {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 
 .social-list.list {
   display: flex;
@@ -231,7 +270,6 @@ header {
 
 .team-list.list {
   display: flex;
-  justify-content: space-between;
 }
 
 .cart-team.item:not(:last-child) {
@@ -246,6 +284,10 @@ header {
   overflow: hidden;
 }
 
+.cart-team.item:not(:last-child) {
+  margin-right: 30px;
+}
+
 .social-link {
   display: block;
   color: var(--primary-text-color);
@@ -258,17 +300,25 @@ header {
 .social-link:focus {
   color: var(--accent-color);
 }
+
 .title.name {
   text-align: center;
   padding-top: 30px;
 }
 
 /*Постоянные клиенты*/
+.client.container {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .client-list.list {
   display: flex;
   justify-content: space-between;
 }
+
 /*Footer*/
+
 .page-footer {
   color: var(--primary-white-color);
   background-color: var(--footer-black-color);
@@ -285,7 +335,9 @@ header {
   padding-top: 45px;
   align-items: baseline;
   justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
+
 .logo-footer {
   color: var(--primary-white-color);
   font-family: Raleway, sans-serif;
@@ -296,28 +348,35 @@ header {
   text-decoration: none;
   padding-bottom: 10px;
 }
+
 .logo-footer .first {
   color: var(--accent-color);
 }
+
 .address-footer {
   font-style: normal;
   display: flex;
   flex-direction: column;
 }
+
 .contact-footer {
   color: rgba(255, 255, 255, 0.6);
 }
+
 .contact-footer:hover,
 .contact-footer:focus {
   color: var(--accent-color);
 }
+
 .footer-box .item:nth-child(1) {
   margin-right: 69px;
 }
+
 .footer-box .item:nth-child(2) {
   margin-right: 94px;
   margin-left: 0;
 }
+
 .footer-social.link {
   display: flex;
   list-style: none;
@@ -325,6 +384,7 @@ header {
   margin-bottom: 74px;
   padding: 0;
 }
+
 .footer-social.link .item:not(:last-child) {
   margin-right: 10px;
 }
@@ -352,7 +412,6 @@ header {
   font-size: 12px;
   line-height: 2;
   padding-bottom: 21px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 18px;
   padding-bottom: 21px;
 }
@@ -360,57 +419,75 @@ header {
 /* CSS Портфолио */
 
 /* Фильтры */
+
+.filter-list.list {
+  display: flex;
+  justify-content: center;
+  padding-top: 94px;
+  margin-bottom: 50px;
+  list-style: none;
+}
+
+.filter-list .item:not(:last-child) {
+  margin-right: 8px;
+}
+
 .menu-nav {
   background-color: #f5f4fa;
 
   font-weight: 500;
   font-size: 16px;
   line-height: 1.63;
+  border: solid #f5f4fa;
+  border-radius: 0px 0px 4px 4px;
+  padding: 6px 22px;
 }
+
 .menu-nav:hover,
 .menu-nav:focus {
   background-color: var(--accent-color);
   color: var(--primary-white-color);
 }
-.filter-list.container {
-  display: flex;
-  justify-content: center;
-  margin-top: 100px;
-  margin-bottom: 50px;
-  list-style: none;
-}
-.filter-list .item:not(:last-child) {
-  margin-right: 8px;
-}
 
-.title-profile {
-  display: none;
-}
 /* Проекты */
-.project-list.container {
+
+.project-list {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 94px;
   list-style: none;
+  padding-bottom: 94px;
 }
+
 .project-list .item {
-  width: calc((100% - 60px) / 3);
+  width: calc((100% - 30px * 2) / 3);
+  margin-right: 30px;
 }
+
+.project-list .item:nth-child(3n) {
+  margin-right: 0;
+}
+
 .project-title {
   color: var(--title-color);
   font-weight: bold;
   font-size: 18px;
   line-height: 2;
+  margin: 0;
 }
+
 .text-menu {
   color: var(--primary-text-color);
   font-weight: normal;
   font-size: 16px;
   line-height: 1.88;
 }
+
 .project-text {
   color: var(--primary-text-color);
   font-size: 18px;
   line-height: 1.56;
-  display: none;
+}
+
+.portfolio-discription {
+  padding: 20px 24px;
 }
