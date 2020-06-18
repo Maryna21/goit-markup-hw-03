@@ -29,6 +29,12 @@ body {
   font-size: 14px;
   line-height: 1.71;
 }
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .container {
   width: 1200px;
   padding-left: 15px;
@@ -73,12 +79,6 @@ p {
 
   width: 200px;
   height: 50px;
-}
-
-.list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
 .link {
@@ -461,10 +461,14 @@ p {
 .project-list .item {
   width: calc((100% - 30px * 2) / 3);
   margin-right: 30px;
+  margin-bottom: 30px;
 }
 
 .project-list .item:nth-child(3n) {
   margin-right: 0;
+}
+.project-list .item:nth-last-child(-n + 3) {
+  margin-bottom: 0;
 }
 
 .project-title {
@@ -490,4 +494,7 @@ p {
 
 .portfolio-discription {
   padding: 20px 24px;
+  border: 1px solid #eeeeee;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
