@@ -99,17 +99,19 @@ p {
 }
 
 /* site-nav */
-.header-profile {
+.header {
   border-bottom: 1px solid #ececec;
 }
-
-.container.main-nav {
+.main-nav {
   display: flex;
-  align-items: center;
+  align-items: baseline;
+}
+.header.container {
+  display: flex;
+  align-items: baseline;
   margin-bottom: 0px;
 }
-
-.site-nav {
+.site-nav.list {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -146,8 +148,6 @@ p {
 /* Logo */
 
 .logo {
-  display: flex;
-
   color: var(--title-color);
   text-decoration: none;
 
@@ -224,6 +224,9 @@ p {
   padding-top: 94px;
   padding-bottom: 94px;
 }
+.feature-list .item {
+  width: 270px;
+}
 
 .feature-list .item:not(:last-child) {
   margin-right: 30px;
@@ -252,12 +255,20 @@ p {
   display: flex;
   padding-bottom: 94px;
 }
+.cart-work {
+  width: 370px;
+}
 
 .cart-work:not(:last-child) {
   margin-right: 30px;
 }
 
 /* Наша команда */
+
+.team-section {
+  background-color: #f5f4fa;
+}
+
 .team.container {
   padding-top: 94px;
   padding-bottom: 94px;
